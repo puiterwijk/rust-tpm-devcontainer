@@ -4,6 +4,11 @@ sudo dbus-daemon --system
 
 sudo chown -Rv vscode:vscode /var/lib/tpmstate
 
+swtpm_setup --tpm2 \
+    --tpmstate /var/lib/tpmstate \
+    --createek --allow-signing --decryption --create-ek-cert \
+    --create-platform-cert \
+    --display
 swtpm socket --tpm2 \
     --tpmstate dir=/var/lib/tpmstate \
     --flags startup-clear \

@@ -15,7 +15,7 @@ COPY dbus-policy.conf /etc/dbus-1/system.d/
 RUN dnf install -y \
 	tpm2-tss-devel tpm2-abrmd tpm2-tools \
 	swtpm swtpm-tools \
-	rust clippy cargo rls \
+	rust clippy cargo rls rustfmt \
 	llvm llvm-devel clang pkg-config \
 	dbus-daemon
 

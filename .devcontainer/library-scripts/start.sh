@@ -1,4 +1,5 @@
 #!/bin/bash -xe
+sudo rm -rf /var/run/dbus
 sudo mkdir /var/run/dbus
 sudo dbus-daemon --system
 

@@ -24,7 +24,7 @@ RUN bash /tmp/library-scripts/common-redhat.sh "$INSTALL_ZSH" "$USERNAME" "$USER
 RUN mkdir /var/lib/tpmstate && \
     swtpm_setup --tpm2 \
         --tpmstate /var/lib/tpmstate \
-        --createek --allow-signing --decryption --create-ek-cert \
+        --createek --decryption --create-ek-cert \
         --create-platform-cert \
         --display && \
     chown -Rv vscode:vscode /var/lib/tpmstate
